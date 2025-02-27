@@ -1,17 +1,6 @@
-type Employee = {
-  name: string;
-  startDate: Date;
-};
-
-// this can also be a type
-interface Manager {
-  name: string,
-  department: string;
-};
-
-type TechLead = Employee & Manager;
-const t: TechLead = {
-  name: "piyush",
-  startDate: new Date(),
-  department: "asdasd"
+function getFirstElement<T>(arr: T[]): T {
+  return arr[0];
 }
+
+const value = getFirstElement(["piyush", "raj"]);
+console.log(value.toLowerCase())

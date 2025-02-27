@@ -1,17 +1,16 @@
 "use strict";
-function isLegal(user) {
-    if (user.age > 18) {
-        return true;
-    }
-    else {
-        return false;
+var Direction;
+(function (Direction) {
+    Direction["Up"] = "up";
+    Direction["Down"] = "down";
+    Direction["Left"] = "left";
+    Direction["Right"] = "right";
+})(Direction || (Direction = {}));
+function doSomething(keyPressed) {
+    if (keyPressed == Direction.Up) {
     }
 }
-function greet(user) {
-    console.log(`hi there ` + user.firstName);
-}
-isLegal({
-    firstName: "Piyush",
-    lastName: "raj",
-    age: 20
-});
+doSomething(Direction.Right);
+doSomething(Direction.Left);
+console.log(Direction.Down);
+console.log(Direction.Up);
